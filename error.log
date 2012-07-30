@@ -42,3 +42,223 @@
 [Mon Jul 30 19:20:14 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
 [Mon Jul 30 19:20:14 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
 [Mon Jul 30 19:20:14 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:41:59 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:42:09 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:42:32 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:10 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:17 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:29 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:43:47 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:44:38 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:45:02 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:266
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php on line 59
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   1. {main}() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:0
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   2. include() C:\\WebServers\\home\\Decanat\\www\\app\\webroot\\index.php:77
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   3. Configure::bootstrap() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\bootstrap.php:142
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   4. include() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Core\\Configure.php:76
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   5. Cache::config() C:\\WebServers\\home\\Decanat\\www\\app\\Config\\core.php:278
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   6. Cache::_buildEngine() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:135
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   7. FileEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Cache.php:164
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   8. CacheEngine->init() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\Engine\\FileEngine.php:80
+[Mon Jul 30 20:51:10 2012] [error] [client 127.0.0.1] PHP   9. strtotime() C:\\WebServers\\home\\Decanat\\www\\lib\\Cake\\Cache\\CacheEngine.php:59
