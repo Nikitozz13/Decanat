@@ -11,7 +11,7 @@
   <tr>
   	<td><?php echo $student['Student']['id'];  ?>  </td>
   	<td><?php echo $student['Student']['personal_number'];  ?>  </td>
-  	<td>  </td>
+    <td><?php echo $student['Person']['last_name'];  ?>  </td>
   	<td>  </td>
   </tr>
 <?php endforeach;  ?>

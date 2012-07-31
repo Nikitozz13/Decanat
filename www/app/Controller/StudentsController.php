@@ -14,7 +14,9 @@
 
 
    	   function index(){
-   	   	  $this->set('students',$this->Student->find('all'/*,$options*/));
+            $students = $this->Student->find('all');
+            //debug($students);
+   	   	$this->set('students', $students);
    	   }
    }
 ?>
