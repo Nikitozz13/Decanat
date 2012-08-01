@@ -30,13 +30,19 @@ CREATE TABLE `disciplines` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `disciplines`
 --
 
 /*!40000 ALTER TABLE `disciplines` DISABLE KEYS */;
+INSERT INTO `disciplines` (`id`,`name`) VALUES 
+ (1,'Программирование'),
+ (2,'Матанализ'),
+ (3,'Физра'),
+ (4,'Цветоведение'),
+ (5,'Проектирование');
 /*!40000 ALTER TABLE `disciplines` ENABLE KEYS */;
 
 
@@ -49,13 +55,17 @@ CREATE TABLE `education_forms` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `education_forms`
 --
 
 /*!40000 ALTER TABLE `education_forms` DISABLE KEYS */;
+INSERT INTO `education_forms` (`id`,`name`) VALUES 
+ (1,'Очная'),
+ (2,'Заочная'),
+ (3,'Вечерняя');
 /*!40000 ALTER TABLE `education_forms` ENABLE KEYS */;
 
 
@@ -87,6 +97,31 @@ CREATE TABLE `exams` (
 
 
 --
+-- Definition of table `exams_students`
+--
+
+DROP TABLE IF EXISTS `exams_students`;
+CREATE TABLE `exams_students` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `student_id` int(10) unsigned NOT NULL,
+  `exam_id` int(10) unsigned NOT NULL,
+  `mark` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `student` (`student_id`),
+  KEY `exam` (`exam_id`),
+  CONSTRAINT `exam` FOREIGN KEY (`exam_id`) REFERENCES `exams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `student` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `exams_students`
+--
+
+/*!40000 ALTER TABLE `exams_students` DISABLE KEYS */;
+/*!40000 ALTER TABLE `exams_students` ENABLE KEYS */;
+
+
+--
 -- Definition of table `faculties`
 --
 
@@ -95,14 +130,47 @@ CREATE TABLE `faculties` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `faculties`
 --
 
 /*!40000 ALTER TABLE `faculties` DISABLE KEYS */;
+INSERT INTO `faculties` (`id`,`name`) VALUES 
+ (1,'ИВТ'),
+ (2,'Худ. Граф');
 /*!40000 ALTER TABLE `faculties` ENABLE KEYS */;
+
+
+--
+-- Definition of table `group_students`
+--
+
+DROP TABLE IF EXISTS `group_students`;
+CREATE TABLE `group_students` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `student_id` int(10) unsigned NOT NULL,
+  `group_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `student_id` (`student_id`),
+  KEY `group_id` (`group_id`),
+  CONSTRAINT `group_id` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `student_id` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `group_students`
+--
+
+/*!40000 ALTER TABLE `group_students` DISABLE KEYS */;
+INSERT INTO `group_students` (`id`,`student_id`,`group_id`) VALUES 
+ (1,1,1),
+ (2,2,1),
+ (3,3,1),
+ (4,4,2),
+ (5,6,4);
+/*!40000 ALTER TABLE `group_students` ENABLE KEYS */;
 
 
 --
@@ -114,20 +182,25 @@ CREATE TABLE `groups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `number` int(10) unsigned NOT NULL,
   `education_form` int(10) unsigned NOT NULL,
-  `entrant_year` date NOT NULL,
+  `entrant_year` date DEFAULT NULL,
   `speciality_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `speciality_id` (`speciality_id`),
   KEY `edu_form_id` (`education_form`),
   CONSTRAINT `edu_form_id` FOREIGN KEY (`education_form`) REFERENCES `education_forms` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `speciality_id` FOREIGN KEY (`speciality_id`) REFERENCES `specialities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `groups`
 --
 
 /*!40000 ALTER TABLE `groups` DISABLE KEYS */;
+INSERT INTO `groups` (`id`,`number`,`education_form`,`entrant_year`,`speciality_id`) VALUES 
+ (1,23,1,'2011-09-01',1),
+ (2,13,1,'2012-09-01',1),
+ (4,23,1,'2011-09-01',3),
+ (5,24,1,'2011-09-01',2);
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
 
 
@@ -143,13 +216,20 @@ CREATE TABLE `people` (
   `birthday` date DEFAULT NULL,
   `sex` varchar(7) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `people`
 --
 
 /*!40000 ALTER TABLE `people` DISABLE KEYS */;
+INSERT INTO `people` (`id`,`first_name`,`last_name`,`birthday`,`sex`) VALUES 
+ (1,'Антон','Стрелов','1993-11-02','М'),
+ (2,'Никита','Старосельцев',NULL,'М'),
+ (3,'Дмитрий','Елкин',NULL,'М'),
+ (4,'Анастасия','Белкина',NULL,'Ж'),
+ (5,'Денис','ТриПакетаЗабыл фамилию',NULL,'М'),
+ (6,'Светлана Николаевна','Водолад',NULL,'Ж');
 /*!40000 ALTER TABLE `people` ENABLE KEYS */;
 
 
@@ -165,15 +245,17 @@ CREATE TABLE `secretaries` (
   PRIMARY KEY (`id`),
   KEY `person` (`person_id`),
   KEY `fac` (`faculty_id`),
-  CONSTRAINT `person` FOREIGN KEY (`person_id`) REFERENCES `people` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fac` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `fac` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `person` FOREIGN KEY (`person_id`) REFERENCES `people` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `secretaries`
 --
 
 /*!40000 ALTER TABLE `secretaries` DISABLE KEYS */;
+INSERT INTO `secretaries` (`id`,`person_id`,`faculty_id`) VALUES 
+ (1,6,1);
 /*!40000 ALTER TABLE `secretaries` ENABLE KEYS */;
 
 
@@ -185,69 +267,24 @@ DROP TABLE IF EXISTS `specialities`;
 CREATE TABLE `specialities` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `code` varchar(45) NOT NULL,
+  `code` varchar(45) DEFAULT NULL,
   `duration` int(10) unsigned NOT NULL,
   `faculty_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `faculty_id` (`faculty_id`),
   CONSTRAINT `faculty_id` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `specialities`
 --
 
 /*!40000 ALTER TABLE `specialities` DISABLE KEYS */;
+INSERT INTO `specialities` (`id`,`name`,`code`,`duration`,`faculty_id`) VALUES 
+ (1,'МОиАИС',NULL,4,1),
+ (2,'Информационная безопасность',NULL,4,1),
+ (3,'Архитектуры',NULL,5,2);
 /*!40000 ALTER TABLE `specialities` ENABLE KEYS */;
-
-
---
--- Definition of table `student_exams`
---
-
-DROP TABLE IF EXISTS `student_exams`;
-CREATE TABLE `student_exams` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `student_id` int(10) unsigned NOT NULL,
-  `exam_id` int(10) unsigned NOT NULL,
-  `mark` varchar(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `student` (`student_id`),
-  KEY `exam` (`exam_id`),
-  CONSTRAINT `student` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `exam` FOREIGN KEY (`exam_id`) REFERENCES `exams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `student_exams`
---
-
-/*!40000 ALTER TABLE `student_exams` DISABLE KEYS */;
-/*!40000 ALTER TABLE `student_exams` ENABLE KEYS */;
-
-
---
--- Definition of table `student_groups`
---
-
-DROP TABLE IF EXISTS `student_groups`;
-CREATE TABLE `student_groups` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `student_id` int(10) unsigned NOT NULL,
-  `group_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `student_id` (`student_id`),
-  KEY `group_id` (`group_id`),
-  CONSTRAINT `student_id` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `group_id` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `student_groups`
---
-
-/*!40000 ALTER TABLE `student_groups` DISABLE KEYS */;
-/*!40000 ALTER TABLE `student_groups` ENABLE KEYS */;
 
 
 --
@@ -259,16 +296,25 @@ CREATE TABLE `students` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `personal_number` int(10) unsigned NOT NULL,
   `person_id` int(10) unsigned NOT NULL,
+  `group_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `person_id` (`person_id`),
-  CONSTRAINT `person_id` FOREIGN KEY (`person_id`) REFERENCES `people` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `Students_to_groups` (`group_id`),
+  CONSTRAINT `person_id` FOREIGN KEY (`person_id`) REFERENCES `people` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `Students_to_groups` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `students`
 --
 
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
+INSERT INTO `students` (`id`,`personal_number`,`person_id`,`group_id`) VALUES 
+ (1,111,1,1),
+ (2,222,2,1),
+ (3,333,3,1),
+ (4,123,5,5),
+ (6,32314,4,4);
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 
 
@@ -306,13 +352,15 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `secretary_id` (`secretary_id`),
   CONSTRAINT `secretary_id` FOREIGN KEY (`secretary_id`) REFERENCES `secretaries` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`,`login`,`password`,`secretary_id`) VALUES 
+ (1,'snvd','qwerty',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 
