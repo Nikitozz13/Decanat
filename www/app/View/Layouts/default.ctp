@@ -31,6 +31,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 		echo $this->Html->css('main');
 		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('bootstrap-responsive.min');
+
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -65,6 +67,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			HITC, 2012
 		</div>
 	</div>
-	<?php // echo $this->element('sql_dump'); ?>
+	<?//= $this->element('sql_dump'); ?>
 </body>
 </html>

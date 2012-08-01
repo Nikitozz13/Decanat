@@ -1,5 +1,67 @@
 <?php
 class Student extends AppModel {
-	public $belongsTo = 'Person';
+	public $name = 'Student';
+	public $belongsTo = array(
+		'Person'
+		/*'Group' => array(
+			'className'=> 'Group',
+			'type' => 'inner',
+			'conditions'=> array('Group.speciality_id'=>'1')			
+		)*/
+
+	);
+	public $hasMany = 'GroupStudent';
+
+	public function index($faculty_id = 1) {
+            $options['joins'] = array(
+               
+               array(                  
+                  'table'=>'group_students',
+                  'alias'=>'GroupStudent',
+                  'type'=>'inner',
+                  'conditions'=>array(
+                     'GroupStudent.student_id = Student.id'
+                  )
+               ),
+               array(                  
+                  'table'=>'groups',
+                  'alias'=>'Group',
+                  'type'=>'inner',
+                  'conditions'=>array(
+                     'GroupStudent.group_id = Group.id'
+                  )
+               ),
+                
+
+              array(
+                  'table'=>'Specialities',
+                  'alias'=>'Speciality',
+                  'type'=>'inner',
+                  'conditions'=>array(
+                     'Group.speciality_id = Speciality.id'
+                  )
+               ),
+
+               array(
+                  'table'=>'Faculties',
+                  'alias'=>'Faculty',
+                  'type'=>'inner',
+                  'conditions' => array(
+                     'Speciality.faculty_id = Faculty.id'
+                  )
+               )
+            );
+
+            $options['conditions'] = array(
+               'Faculty.id' => $faculty_id
+            );
+
+            $options['fields'] = array('Group.number', 'Group.id', 'Student.id', 'Student.personal_number', 'Person.last_name', 'Faculty.name', 'Faculty.id');
+
+            $students = $this->find('all', $options);
+
+            return $students;
+       	}
+
 }
 ?>
