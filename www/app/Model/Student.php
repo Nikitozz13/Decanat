@@ -1,18 +1,10 @@
 <?php
 class Student extends AppModel {
 	public $name = 'Student';
-	public $belongsTo = array(
-		'Person'
-		/*'Group' => array(
-			'className'=> 'Group',
-			'type' => 'inner',
-			'conditions'=> array('Group.speciality_id'=>'1')			
-		)*/
-
-	);
+	public $belongsTo = 'Person';
 	public $hasMany = 'GroupStudent';
 
-	public function index($faculty_id = 1) {
+	public function students_list($faculty_id = 1) {
             $options['joins'] = array(
                
                array(                  
