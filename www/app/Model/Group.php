@@ -1,8 +1,8 @@
 <?php
 class Group extends AppModel {
 	public $name = 'Group';
-	/*public $belongsTo = [
-		'Speciality',
+	/*public $belongsTo = [						если раскоментить то ругается  на одинаковые алиасы
+		'Speciality',							но если раскоментить только hasMany то, хоть одинаковые алиасы и есть, но не ругается
 		'Education_form' => array(
 			'className' => 'Education_form',
 			'foreignKey' => 'education_form'
