@@ -62,6 +62,10 @@ class Speciality extends AppModel {
             )
          )
       );
+   $options['conditions'] = array(
+      'Faculty.id' => $faculty_id,
+      'Speciality.id' => $speciality_id
+   );
 
    $options['fields'] = '*';
 

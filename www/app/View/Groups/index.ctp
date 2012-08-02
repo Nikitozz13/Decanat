@@ -21,7 +21,7 @@
     <tr>
       <td><?php echo $group['Group']['id'];  ?>  </td>
       <td><?php echo $group['Group']['number'];  ?>  </td>
-      <td><?php echo $group['Speciality']['name'];  ?>  </td>
+      <td><a href="/specialities/students_from_speciality/<?=$group['Speciality']['id'];?>"> <?= $group['Speciality']['name'];?> </a></td>
       <td><?php echo $group['Education_form']['name'];  ?>   </td>
       <td><a href="#" class="btn">Изменить</a></td>
     </tr>

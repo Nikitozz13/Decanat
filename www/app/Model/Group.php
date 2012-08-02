@@ -10,7 +10,7 @@ class Group extends AppModel {
 	];
 	public $hasMany = 'GroupStudent';*/
 
-	public function group_list($faculty_id){
+	public function index($faculty_id){
 		//$options['recursive'] = 2;
 		$options['joins'] = array(
 
