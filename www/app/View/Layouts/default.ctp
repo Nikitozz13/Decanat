@@ -49,7 +49,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li class="active"><a href="/students">Студенты</a></li>
+						<li ><a href="/students">Студенты</a></li>
 						<li ><a href="/groups">Группы</a></li>
 						<li><a href="#">Факультеты</a></li>
 						<li><a href="#">Специальности</a></li>

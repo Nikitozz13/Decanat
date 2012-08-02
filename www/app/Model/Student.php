@@ -4,7 +4,7 @@ class Student extends AppModel {
 	public $belongsTo = 'Person';
 	public $hasMany = 'GroupStudent';
 
-	public function students_list($faculty_id = 1) {
+	public function students_list($faculty_id) {
             $options['joins'] = array(
                
                array(                  

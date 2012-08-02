@@ -1,8 +1,8 @@
-<h2>Список групп на факультете <?//=echo $group['Faculty']['name'];?></h2>
+<h2>Список групп на вашем факультете</h2>
 
 <div class="row">
   <div class="span2">
-    <a href="#" class="btn btn-primary">Добавить студента</a>
+    <a href="#" class="btn btn-primary">Добавить группу</a>
   </div>
 </div>
 
