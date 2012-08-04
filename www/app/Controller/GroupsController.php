@@ -8,19 +8,16 @@
             $this->set('course', $course);
             $this->set('groups', $groups);
    	   }
-
-   	   function students_from_group($group_id){ 
-   	   		$groups = $this->Group->students_from_group($group_id);
-   	   		//debug($groups);
-               $this->set('groups', $groups);
-               $this->Group->id = $group_id;
-               $this->set('groupNumber', $this->Group->field('number'));   	   		
-   	   }
-
+   	  
          function groups_from_speciality($speciality_id){
             $groups = $this->Group->groups_from_speciality($speciality_id);
             //debug($groups);
             $this->set('groups', $groups);            
+         }
+
+         function get_number($group_id){
+            $this->Group->id = $group_id;
+            return $this->Group->field('number');
          }
 
    }

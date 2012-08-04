@@ -23,7 +23,7 @@
       <td><?php echo $student['Student']['id'];  ?>  </td>
       <td><?php echo $student['Student']['personal_number'];  ?>  </td>
       <td><?php echo $student['Person']['last_name'];  ?>  </td>
-      <td><a href="/groups/students_from_group/<?= $student['Group']['id']; ?>"><?php echo $student['Group']['number'];  ?>   </td>
+      <td><a href="/students/students_from_group/<?= $student['Group']['id']; ?>"><?php echo $student['Group']['number'];  ?>   </td>
       <td><?php echo $student['Faculty']['name'];  ?>   </td>
       <td><a href="#" class="btn">Изменить</a></td>
     </tr>

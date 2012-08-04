@@ -1,4 +1,4 @@
-<? if (!empty($groups)) : ?>
+<? if (!empty($students)) : ?>
 
 <h2>студенты из <?php echo $groupNumber; ?> группы</h2>
 
@@ -18,11 +18,11 @@
     </tr> 
   </thead>
   <tbody>
-    <?php foreach ($groups as $group):  ?>
+    <?php foreach ($students as $student):  ?>
     <tr>
-      <td><?php echo $group['Student']['id'];  ?>  </td>
-      <td><?php echo $group['Student']['personal_number'];  ?>  </td>
-      <td><?php echo $group['Person']['last_name'];  ?>  </td>
+      <td><?php echo $student['Student']['id'];  ?>  </td>
+      <td><?php echo $student['Student']['personal_number'];  ?>  </td>
+      <td><?php echo $student['Person']['last_name'];  ?>  </td>
       <td><a href="#" class="btn">Изменить</a></td>
     </tr>
     <?php endforeach;  ?>
