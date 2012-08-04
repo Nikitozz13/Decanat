@@ -10,7 +10,7 @@ class Group extends AppModel {
 	];
 	public $hasMany = 'GroupStudent';*/
 
-	public function index($faculty_id){
+	public function index($faculty_id, $course){
 		//$options['recursive'] = 2;
 		$options['joins'] = array(
 
@@ -41,8 +41,16 @@ class Group extends AppModel {
 				)
 			)
 		);
+
+		$currentDate = new DateTime();
+        $entrantDate = DateTime::createFromFormat('Y-m-d', '2011-09-01');
+
+        $dateDiff = date_diff($currentDate, $entrantDate);
+        $realCourse = $dateDiff->y;
+
 		$options['conditions'] = array(
-			'Speciality.faculty_id' => $faculty_id
+			'Speciality.faculty_id' => $faculty_id,
+			'Group.number LIKE' => $course . '_'
 		);
 		$options['fields'] = '*';
 		return $this->find('all',$options);

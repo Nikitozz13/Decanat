@@ -1,4 +1,6 @@
-<h2>студенты из <?php echo $groups[0]['Group']['number'];?> группы</h2>
+<? if (!empty($groups)) : ?>
+
+<h2>студенты из <?php echo $groupNumber; ?> группы</h2>
 
 <div class="row">
   <div class="span2">
@@ -26,3 +28,11 @@
     <?php endforeach;  ?>
   </tbody>
 </table>
+
+<? else : ?>
+
+<div class="alert alert-error">
+  В группе <?= $groupNumber ?> нет ни одного студента
+</div>
+
+<? endif ?>

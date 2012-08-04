@@ -49,9 +49,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li ><a href="/students">Студенты</a></li>
-						<li ><a href="/groups">Группы</a></li>
-						<li><a href="/specialities">Специальности</a></li>
+						<li <? if ($controller == 'students') : ?> class="active" <? endif ?>><a href="/students">Студенты</a></li>
+						<li <? if ($controller == 'groups') : ?> class="active" <? endif ?>><a href="/groups">Группы</a></li>
+						<li <? if ($controller == 'specialities') : ?> class="active" <? endif ?>><a href="/specialities">Специальности</a></li>
 					</ul>
 				</div>
 			</div>

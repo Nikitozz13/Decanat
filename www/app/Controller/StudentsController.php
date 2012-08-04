@@ -6,5 +6,9 @@
             //debug($students);
    	   	$this->set('students', $students);
    	   }
+
+   	   function add() {
+   	   
+   	   }
    }
 ?>

@@ -1,5 +1,15 @@
 <h2>Список групп на вашем факультете</h2>
 
+<ul class="nav nav-tabs">
+  <li <? if ($course == 1) : ?> class="active" <? endif ?>>
+    <a href="/groups/index/1">1 курс</a>
+  </li>
+  <li <? if ($course == 2) : ?> class="active" <? endif ?>>
+    <a href="/groups/index/2">2 курс</a>
+  </li>
+</ul>
+
+
 <div class="row">
   <div class="span2">
     <a href="#" class="btn btn-primary">Добавить группу</a>
