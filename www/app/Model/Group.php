@@ -1,34 +1,23 @@
 <?php
 class Group extends AppModel {
 	public $name = 'Group';
-	/*public $belongsTo = [						если раскоментить то ругается  на одинаковые алиасы
-		'Speciality',							но если раскоментить только hasMany то, хоть одинаковые алиасы и есть, но не ругается
+	public $belongsTo = [						
+		'Speciality',							//  ??? вопрос про одинаковые алиасы и повторение в sql запросе таблиц
 		'Education_form' => array(
 			'className' => 'Education_form',
 			'foreignKey' => 'education_form'
 		)
 	];
-	public $hasMany = 'GroupStudent';*/
+	public $hasMany = 'GroupStudent';
 
 	public function index($faculty_id, $course){
-		//$options['recursive'] = 2;
 		$options['joins'] = array(
 
 			array(
-				'table' => 'education_forms',
-				'alias' => 'Education_form',
-				'type'=>'inner',
-				'conditions' => array(
-					'Group.education_form = Education_form.id'
-				)
-			),
-
-			array(
 				'table' => 'specialities',
-				'alias' => 'Speciality',
 				'type'=>'inner',
 				'conditions' => array(
-					'Group.speciality_id = Speciality.id'
+					'Group.speciality_id = specialities.id'
 				)
 			),
 
@@ -37,16 +26,16 @@ class Group extends AppModel {
 				'alias' => 'Faculty',
 				'type'=>'inner',
 				'conditions' => array(
-					'Faculty.id = Speciality.faculty_id'
+					'Faculty.id = specialities.faculty_id'
 				)
 			)
 		);
 
-		$currentDate = new DateTime();
+		/*$currentDate = new DateTime();                                    попытка вычислить курс, используя текущую дату и дату поступления
         $entrantDate = DateTime::createFromFormat('Y-m-d', '2011-09-01');
 
         $dateDiff = date_diff($currentDate, $entrantDate);
-        $realCourse = $dateDiff->y;
+        $realCourse = $dateDiff->y;*/
 
 		$options['conditions'] = array(
 			'Speciality.faculty_id' => $faculty_id,
@@ -58,7 +47,7 @@ class Group extends AppModel {
 
 	
 
-	public function students_from_group($faculty_id, $group_id){
+	public function students_from_group($group_id){ 
 		$options['joins'] = array(
 
 			array(
@@ -91,10 +80,9 @@ class Group extends AppModel {
 
 			array(
 				'table' => 'specialities',
-				'alias' => 'Speciality',
 				'type'=>'inner',
 				'conditions' => array(
-					'Group.speciality_id = Speciality.id'
+					'Group.speciality_id = specialities.id'
 				)
 			),
 
@@ -103,17 +91,24 @@ class Group extends AppModel {
 				'alias' => 'Faculty',
 				'type'=>'inner',
 				'conditions' => array(
-					'Faculty.id' => $faculty_id,
-					'Faculty.id = Speciality.faculty_id'
+					'Faculty.id = specialities.faculty_id'
 				)
 			)
 		);
 
-	$options['fields'] = '*';
+		$options['fields'] = '*';
 
-	$groups = $this->find('all', $options);
+		return $this->find('all', $options);
+	}
 
-    return $groups;
+
+	public function groups_from_speciality($speciality_id){
+		$options['conditions'] = array(
+			'Group.speciality_id' => $speciality_id
+		);
+
+		return $this->find('all',$options);
+
 	}
 }
 ?>

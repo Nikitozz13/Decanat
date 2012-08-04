@@ -8,7 +8,7 @@
    	   }
 
    	   function students_from_speciality($speciality_id){ 
-   	   		$specialities = $this->Speciality->students_from_speciality(1, $speciality_id); // заглушка TODO: передать id факультета секретаря
+   	   		$specialities = $this->Speciality->students_from_speciality($speciality_id);
    	   		//debug($specialities);
    	   		$this->set('specialities', $specialities);
    	   }

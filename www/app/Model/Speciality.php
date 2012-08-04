@@ -4,16 +4,6 @@ class Speciality extends AppModel {
    public $belongsTo = 'Faculty';
 
 	public function specialities_list($faculty_id) {
-            /*$options['joins'] = array(
-               array(
-                  'table'=>'Faculties',
-                  'alias'=>'Faculty',
-                  'type'=>'inner',
-                  'conditions' => array(
-                     'Speciality.faculty_id = Faculty.id'
-                  )
-               )
-            );*/
 
             $options['conditions'] = array(
                'Faculty.id' => $faculty_id
@@ -24,7 +14,7 @@ class Speciality extends AppModel {
             return $this->find('all', $options);
    }
 
-   public function students_from_speciality($faculty_id, $speciality_id){
+   public function students_from_speciality($speciality_id){
       $options['joins'] = array(
          array(
             'table' => 'groups',
@@ -63,7 +53,6 @@ class Speciality extends AppModel {
          )
       );
    $options['conditions'] = array(
-      'Faculty.id' => $faculty_id,
       'Speciality.id' => $speciality_id
    );
 

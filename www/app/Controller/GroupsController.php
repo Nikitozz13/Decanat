@@ -10,13 +10,18 @@
    	   }
 
    	   function students_from_group($group_id){ 
-   	   		$groups = $this->Group->students_from_group(1, $group_id); // заглушка TODO: передать id факультета секретаря
+   	   		$groups = $this->Group->students_from_group($group_id);
    	   		//debug($groups);
+               $this->set('groups', $groups);
                $this->Group->id = $group_id;
-               $this->set('groupNumber', $this->Group->field('number'));
-
-   	   		$this->set('groups', $groups);
+               $this->set('groupNumber', $this->Group->field('number'));   	   		
    	   }
+
+         function groups_from_speciality($speciality_id){
+            $groups = $this->Group->groups_from_speciality($speciality_id);
+            //debug($groups);
+            $this->set('groups', $groups);            
+         }
 
    }
 ?>
