@@ -17,9 +17,11 @@
          }
 
    	   function add($group_id = NULL) {
-            $this->set('groups',$this->Student->GroupStudent->Group->find('list'));
+            $this->set('groups',$this->Student->GroupStudent->Group->find('list')); // TODO сделать фильтр по факультету серетаря
             $ref = $this->request->referer();
             debug($ref);
+            if(!is_null($group_id))
+               $this->set('groupId',$group_id);
             if($this->request->is('post')){
                if($this->Student->save($this->request->data)){
                   $this->Session->setFlash('Студнет добавлен');
