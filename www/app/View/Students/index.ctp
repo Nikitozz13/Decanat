@@ -1,8 +1,9 @@
-<h2>студенты</h2>
+<h2>Студенты</h2>
 
 <div class="row">
   <div class="span2">
     <a href="/students/add" class="btn btn-primary">Добавить студента</a>
+    <a href="Students/Addnew" class="btn">Добавить студента</a>
   </div>
 </div>
 
