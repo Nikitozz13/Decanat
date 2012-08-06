@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="span2">
-    <a href="#" class="btn btn-primary">Добавить студента</a>
+    <a href="/students/add" class="btn btn-primary">Добавить студента</a>
   </div>
 </div>
 
