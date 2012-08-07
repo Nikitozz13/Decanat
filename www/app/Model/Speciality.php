@@ -3,6 +3,32 @@ class Speciality extends AppModel {
    public $name = 'Speciality';
    public $belongsTo = 'Faculty';
 
+   public $validations = array(
+      'name' => array(
+         'notEmpty' =>array(
+            'rule' => 'notEmpty',
+            'message' => 'Введите имя для специальности'
+         )
+      ),
+      
+      'code' => array(
+         'rule' => 'numeric',
+         'message' => 'Код должен быть числовой',
+         'allowEmpty' => true
+      ),  
+
+      'duration' => array(
+         'notEmpty' =>array(
+            'rule' => 'notEmpty',
+            'message' => 'Выберите продолжительность обучения'
+         ),
+         'numeric' =>array(
+            'rule' => 'numeric',
+            'message' => 'Продолжительность обучения - число'
+         )
+      )
+   );
+
 	public function specialities_list($faculty_id) {
 
             $options['conditions'] = array(
