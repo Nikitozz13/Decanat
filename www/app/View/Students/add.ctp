@@ -7,13 +7,13 @@ echo $this->Form->create('Student',
 		'action' => 'save'
 	)
 );
-echo $this->Form->input('Student.personal_number', array('label' => 'Персональный номер'));
-echo $this->Form->input('Person.last_name', array('label' => 'Фамилия'));
-echo $this->Form->input('Person.first_name', array('label' => 'Имя'));
-echo $this->Form->input('Person.birthday', array('label' => 'Днеь рождения',  'empty' => array('null'=>'Выберите значение')));
+echo $this->Form->input('Student.personal_number', array('label' => 'Персональный номер:'));
+echo $this->Form->input('Person.last_name', array('label' => 'Фамилия:'));
+echo $this->Form->input('Person.first_name', array('label' => 'Имя:'));
+echo $this->Form->input('Person.birthday', array('label' => 'Днеь рождения:',  'empty' => array('null'=>'Выберите значение')));
 echo $this->Form->input('Person.sex',
 	array(
-		'label' => 'Пол', 
+		'label' => 'Пол:', 
 		'empty' => array('null'=>'Выберите значение'),
 		'options' => array(
 			'М'=>'Мужской',
