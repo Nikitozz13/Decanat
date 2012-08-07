@@ -22,7 +22,7 @@ class Group extends AppModel {
 			)
 		),
 
-		'education_form' => array(
+		/*'education_form' => array(
 			'notEmpty' =>array(
 				'rule' => 'notEmpty',
 				'message' => 'Выберете форму образования'
@@ -31,7 +31,7 @@ class Group extends AppModel {
 				'rule' => 'numeric',
 				'message' => 'Выберете существующую форму образования'
 			)
-		),
+		),*/
 
 		'entrant_year' => array(
 			'notEmpty' =>array(
@@ -44,7 +44,7 @@ class Group extends AppModel {
 			)
 		),
 
-		'speciality_id' => array(
+		/*'speciality_id' => array(
 			'notEmpty' =>array(
 				'rule' => 'notEmpty',
 				'message' => 'Выберете специальность'
@@ -53,7 +53,7 @@ class Group extends AppModel {
 				'rule' => 'numeric',
 				'message' => 'Выберете корректную специальность'
 			)
-		)
+		)*/
 
 	);
 
