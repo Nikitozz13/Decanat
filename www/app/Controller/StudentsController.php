@@ -17,25 +17,23 @@
                $this->set('groupNumber', $this->requestAction("/groups/get_number/$group_id"));        // ??? правильно ли, или я изобретаю вело, и есть способ проще,        
          }
 
-   	   function add($group_id=1) {
+   	   function add($group_id) {
             if (!is_null($group_id)) {
                $this->set('groupId', $group_id);
                $this->set('groups',$this->Student->GroupStudent->Group->find('list')); // TODO сделать фильтр по факультету серетаря
             } else {
-               $this->Session->setFlash('Нужно выбрать группу');
-               $this->redirect($this->request->referer());
+               $this->Session->setFlash('Выберете группу для добавления студентов', 'default', array('class' => 'alert alert-error'));
+               $this->redirect('/groups');
             }
    	   }
          
          function save() {
             debug($this->request->data);
             if ($this->request->data) {
-               debug('1');
+               debug('ветка да');
 
                $dataSource = $this->Student->getDataSource();
-
                $dataSource->begin();
-
                $alrigrht = true;
 
                if($this->Person->save($this->request->data)) {
@@ -57,14 +55,14 @@
 
                if ($alrigrht) {
                   $dataSource->commit();
-                  $this->Session->setFlash('Студент добавлен');
+                  $this->Session->setFlash('Студент добавлен', 'default', array('class' => 'alert alert-success'));
                } else {
                   $dataSource->rollback();
                }
 
             } else {
-               debug('0');
-               $this->Session->setFlash('Ошибка при добавлении студента');
+               debug('ветка нет');
+               $this->Session->setFlash('Ошибка при добавлении студента', 'default', array('class' => 'alert alert-error'));
             }     
          }
          
