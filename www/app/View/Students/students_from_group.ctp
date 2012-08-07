@@ -35,4 +35,10 @@
   В группе <?= $groupNumber ?> нет ни одного студента
 </div>
 
+<div class="row">
+  <div class="span2">
+    <a href="/students/add/<?=$groupId?>" class="btn btn-primary">Добавить студента в эту группу</a>
+  </div>
+</div>
+
 <? endif ?>
