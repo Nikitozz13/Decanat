@@ -10,7 +10,7 @@ class Group extends AppModel {
 	);
 	public $hasMany = 'GroupStudent';
 	public $displayField = 'number';
-	public $validation = array(
+	public $validate = array(
 		'number' => array(
 			'notEmpty' =>array(
 				'rule' => 'notEmpty',

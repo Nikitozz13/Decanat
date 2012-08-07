@@ -4,6 +4,19 @@ class Student extends AppModel {
 	public $belongsTo = 'Person';
 	public $hasMany = 'GroupStudent';
 
+   public $validate = array(
+      'personal_number' => array(
+         'notEmpty' =>array(
+            'rule' => 'notEmpty',
+            'message' => 'Введите персональный номер студента'
+         ),
+         'numeric' =>array(
+            'rule' => 'numeric',
+            'message' => 'Персональный номер должен быть чеслом'
+         )
+      ),
+   );
+
 	public function students_list($faculty_id) {
             $options['joins'] = array(
                

@@ -3,7 +3,7 @@ class Speciality extends AppModel {
    public $name = 'Speciality';
    public $belongsTo = 'Faculty';
 
-   public $validations = array(
+   public $validate = array(
       'name' => array(
          'notEmpty' =>array(
             'rule' => 'notEmpty',
