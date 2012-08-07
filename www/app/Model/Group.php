@@ -1,14 +1,15 @@
 <?php
 class Group extends AppModel {
 	public $name = 'Group';
-	public $belongsTo = [						
+	public $belongsTo = array(						
 		'Speciality',							//  ??? вопрос про одинаковые алиасы и повторение в sql запросе таблиц
 		'Education_form' => array(
 			'className' => 'Education_form',
 			'foreignKey' => 'education_form'
 		)
-	];
+	);
 	public $hasMany = 'GroupStudent';
+	public $displayField = 'number';
 
 	public function index($faculty_id, $course){
 		$options['joins'] = array(
