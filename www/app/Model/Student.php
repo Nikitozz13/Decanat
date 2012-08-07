@@ -12,7 +12,7 @@ class Student extends AppModel {
          ),
          'numeric' =>array(
             'rule' => 'numeric',
-            'message' => 'Персональный номер должен быть чеслом'
+            'message' => 'Персональный номер должен быть числом'
          )
       ),
    );
