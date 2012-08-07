@@ -26,6 +26,17 @@ class Speciality extends AppModel {
             'rule' => 'numeric',
             'message' => 'Продолжительность обучения - число'
          )
+      ),
+
+      'faculty_id' => array(
+            'notEmpty' =>array(
+            'rule' => 'notEmpty',
+            'message' => 'пустой  faculty_id'
+         ),
+            'numeric' =>array(
+            'rule' => 'numeric',
+            'message' => 'не числовой faculty_id'
+         )
       )
    );
 

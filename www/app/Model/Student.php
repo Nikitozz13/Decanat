@@ -15,6 +15,17 @@ class Student extends AppModel {
             'message' => 'Персональный номер должен быть числом'
          )
       ),
+
+      'person_id' => array(
+            'notEmpty' =>array(
+            'rule' => 'notEmpty',
+            'message' => 'пустой  person_id'
+         ),
+            'numeric' =>array(
+            'rule' => 'numeric',
+            'message' => 'не числовой person_id'
+         )
+      )
    );
 
 	public function students_list($faculty_id) {
