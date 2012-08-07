@@ -1,5 +1,6 @@
 <?php
    class GroupsController extends AppController {
+      public $uses = array('Group', 'Speciality');
 
    	   function index($course = 1) {
             $groups = $this->Group->index(1, $course); // заглушка TODO: передать id факультета секретаря 
@@ -18,6 +19,14 @@
          function get_number($group_id){
             $this->Group->id = $group_id;
             return $this->Group->field('number');
+         }
+
+         function add() {
+
+         }
+
+         function save() {
+
          }
 
    }
