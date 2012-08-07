@@ -67,9 +67,6 @@
                $this->Session->setFlash('Ошибка при добавлении студента');
             }     
          }
-
-         function Addnew() {
-
-         }
+         
    }
 ?>
