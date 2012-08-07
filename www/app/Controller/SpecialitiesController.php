@@ -19,7 +19,29 @@
          }
 
          function save () {
+            if ($this->request->data) {
 
+               $dataSource = $this->Speciality->getDataSource();
+               $dataSource->begin();
+               $allright = true;
+
+               if ($this->Speciality->save($this->request->data)) {
+               } else {
+                  $allright = false;
+                  }
+
+               if ($allright) {
+                  $dataSource->commit();
+                  $this->Session->setFlash('Специальность добавлена', 'default', array('class' => 'alert alert-success'));
+               } else {
+                  $dataSource->rollback();
+                  $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
+                  }
+
+            } else {
+               debug('ветка нет');
+               $this->Session->setFlash('Ошибка при добавлении студента', 'default', array('class' => 'alert alert-error'));
+               }
          }
    }
 ?>
