@@ -1,10 +1,5 @@
 <h2>Студенты</h2>
 
-<div class="row">
-  <div class="span2">
-    <a href="/students/add" class="btn btn-primary">Добавить студента</a>
-  </div>
-</div>
 
 <table class='table table-bordered table-striped table-condensed' style="margin-top: 2em">
   <thead>
