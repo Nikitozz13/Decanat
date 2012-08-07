@@ -8,8 +8,8 @@ class Person extends AppModel {
             'rule' => 'notEmpty',
             'message' => 'Введите имя'
          ),
-         'numeric' =>array(
-            'rule'    => '/^[а-яa-z]$/i',
+         'numeric' => array(
+            'rule'    => 'alphaNumeric', //'/^[а-яa-z]$/i',
             'message' => 'Имя должно быть из букв'
          )
       ),
@@ -20,7 +20,7 @@ class Person extends AppModel {
             'message' => 'Введите фамилию'
          ),
          'numeric' =>array(
-            'rule'    => '/^[а-яa-z]$/i',
+            'rule'    => 'alphaNumeric',  //'/^[а-яa-z]$/i',
             'message' => 'Фамилия должна быть из букв'
          )
       ),
@@ -39,7 +39,7 @@ class Person extends AppModel {
             'message' => 'Выберите пол'
          ),
          'inList' =>array(
-            'rule'    => array('inList', array('М','Ж')),
+            'rule' => array('inList', array('Ж','М')),  // просто магия какаято... с буквой М
             'message' => 'Пол: М или Ж'
          )
       ),

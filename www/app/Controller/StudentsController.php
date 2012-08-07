@@ -34,30 +34,34 @@
 
                $dataSource = $this->Student->getDataSource();
                $dataSource->begin();
-               $alrigrht = true;
+               $allright = true;
 
                if($this->Person->save($this->request->data)) {
-                  $this->request->data['Student']['person_id'] = $this->Person->id;
-               } else {
-                  $alrigrht = false;
-               }
+                     $this->request->data['Student']['person_id'] = $this->Person->id;
 
-               if($this->Student->save($this->request->data)) {
-                  $this->request->data['GroupStudent']['student_id'] = $this->Student->id;
-               } else {
-                  $alrigrht = false;
-               }
+                     if($this->Student->save($this->request->data)) {
+                           $this->request->data['GroupStudent']['student_id'] = $this->Student->id;
 
-               if($this->GroupStudent->save($this->request->data)) {
-               } else {
-                  $alrigrht = false;
-               }
+                           if($this->GroupStudent->save($this->request->data)) {
+                           } else {
+                              $allright = false;
+                           }
 
-               if ($alrigrht) {
+                     } else {
+                        $allright = false;
+                     }
+
+
+               } else {
+                  $allright = false;
+               }                     
+
+               if ($allright) {
                   $dataSource->commit();
                   $this->Session->setFlash('Студент добавлен', 'default', array('class' => 'alert alert-success'));
                } else {
                   $dataSource->rollback();
+                  $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
                }
 
             } else {
