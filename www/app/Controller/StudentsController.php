@@ -20,7 +20,7 @@
    	   function add($group_id) {
             if (!is_null($group_id)) {
                $this->set('groupId', $group_id);
-               $this->set('groups',$this->Student->GroupStudent->Group->find('list')); // TODO сделать фильтр по факультету серетаря
+               $this->set('groupNumber',$this->requestAction("/groups/get_number/$group_id"));
             } else {
                $this->Session->setFlash('Выберете группу для добавления студентов', 'default', array('class' => 'alert alert-error'));
                $this->redirect('/groups');
@@ -28,7 +28,7 @@
    	   }
          
          function save() {
-            debug($this->request->data);
+            //debug($this->request->data);
             if ($this->request->data) {
                debug('ветка да');
 

@@ -1,4 +1,5 @@
 <?php
+debug($this->request->data);
 /**
  *
  * PHP 5
