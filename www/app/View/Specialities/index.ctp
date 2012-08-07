@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="span2">
-    <a href="#" class="btn btn-primary">Добавить специальность</a>
+    <a href="Specialities/add" class="btn btn-primary">Добавить специальность</a>
   </div>
 </div>
 

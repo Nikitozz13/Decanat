@@ -1,5 +1,6 @@
 <?php
    class SpecialitiesController extends AppController{
+         public $uses = array('Speciality');
 
    	   function index() {
             $specialities = $this->Speciality->specialities_list(1); // заглушка TODO: передать id факультета секретаря 
@@ -12,5 +13,13 @@
    	   		//debug($specialities);
    	   		$this->set('specialities', $specialities);
    	   }
+
+         function add() {
+
+         }
+
+         function save () {
+
+         }
    }
 ?>
