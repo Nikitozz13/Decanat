@@ -21,65 +21,59 @@
          }
 
    	   function add($group_id) {
-            if($this->request->data($data_sended)){
-               debug('данные присланы сохранение');
-               $this->save();
-            } else {
-               debug('данных нет');
-               if (!is_null($group_id)) {
-                  $this->set('groupId', $group_id);
-                  $this->set('groupNumber',$this->requestAction("/groups/get_number/$group_id"));
-               } else {
-                  $this->Session->setFlash('Выберете группу для добавления студентов', 'default', array('class' => 'alert alert-error'));
-                  $this->redirect('/groups');
+            if (!is_null($group_id)) {
+               $this->set('groupId', $group_id);
+               $this->set('groupNumber',$this->requestAction("/groups/get_number/$group_id"));
+
+               //---------------------------------------сохранение---------------------------------------------------
+               if($this->request->data('data_sended')){      // нажали на кнопку - значит пытаемся сохранить
+                  debug('данные присланы сохранение');
+                  
+                  $dataSource = $this->Student->getDataSource();
+                  $dataSource->begin();
+                  $allright = true;
+
+                  if($this->Person->save($this->request->data)) {
+                        $this->request->data['Student']['person_id'] = $this->Person->id;
+
+                        if($this->Student->save($this->request->data)) {
+                              $this->request->data['GroupStudent']['student_id'] = $this->Student->id;
+
+                              if($this->GroupStudent->save($this->request->data)) {
+                              } else {
+                                 $allright = false;
+                              }
+
+                        } else {
+                           $allright = false;
+                        }
+
+
+                  } else {
+                     $allright = false;
+                  }                     
+
+                  if ($allright) {
+                     $dataSource->commit();
+                     $this->Session->setFlash('Студент добавлен', 'default', array('class' => 'alert alert-success'));
+                     $this->redirect("/students/students_from_group/$group_id");
+                  } else {
+                     $dataSource->rollback();
+                     $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
+                  }
+
+               } else {               // на кнопку не нажимали - занимаемся только отображением страницы
+                  debug('данных нет'); 
                }
+               //---------------------------------------сохранение---------------------------------------------------
+
+            } else {  // в адресной строке нету id группы
+               $this->Session->setFlash('Выберете группу для добавления студентов', 'default', array('class' => 'alert alert-error'));
+               $this->redirect('/groups');
             }
-   	   }
-         
-         function save() {
-               if ($this->request->data) {
-               debug('ветка да');
-
-
-               $dataSource = $this->Student->getDataSource();
-               $dataSource->begin();
-               $allright = true;
-
-               if($this->Person->save($this->request->data)) {
-                     $this->request->data['Student']['person_id'] = $this->Person->id;
-
-                     if($this->Student->save($this->request->data)) {
-                           $this->request->data['GroupStudent']['student_id'] = $this->Student->id;
-
-                           if($this->GroupStudent->save($this->request->data)) {
-                           } else {
-                              $allright = false;
-                           }
-
-                     } else {
-                        $allright = false;
-                     }
-
-
-               } else {
-                  $allright = false;
-               }                     
-
-               if ($allright) {
-                  $dataSource->commit();
-                  $this->Session->setFlash('Студент добавлен', 'default', array('class' => 'alert alert-success'));
-               } else {
-                  $dataSource->rollback();
-                  $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
-               }
-
-
-            } else {
-               debug('ветка нет');
-               $this->Session->setFlash('Ошибка при добавлении студента', 'default', array('class' => 'alert alert-error'));
-            }  
-         //$this->render('add');   
          }
+   	   
+         
          
    }
 ?>

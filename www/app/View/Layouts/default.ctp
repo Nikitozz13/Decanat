@@ -1,6 +1,6 @@
 <?php
 debug($this->request->data);
-debug(array('параметры', $this->request->params));
+//debug( $this->request->params);
 
 /**
  *

@@ -6,10 +6,11 @@ class Student extends AppModel {
 
    public $validate = array(
       'personal_number' => array(
-         'notEmpty' =>array(
+         'notEmpty' => array(
             'rule' => 'notEmpty',
             'message' => 'Введите персональный номер студента'
          ),
+         
          'numeric' =>array(
             'rule' => 'numeric',
             'message' => 'Персональный номер должен быть числом'
