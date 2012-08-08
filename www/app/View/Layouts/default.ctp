@@ -1,5 +1,7 @@
 <?php
 debug($this->request->data);
+debug(array('параметры', $this->request->params));
+
 /**
  *
  * PHP 5
