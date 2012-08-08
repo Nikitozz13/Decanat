@@ -3,6 +3,9 @@
          public $components = array('Session');
          public $uses = array('Student', 'Person', 'GroupStudent');
 
+
+
+
    	   function index() {
             $students = $this->Student->students_list(1); // заглушка TODO: передать id факультета секретаря 
             //debug($students);
@@ -18,19 +21,25 @@
          }
 
    	   function add($group_id) {
-            if (!is_null($group_id)) {
-               $this->set('groupId', $group_id);
-               $this->set('groupNumber',$this->requestAction("/groups/get_number/$group_id"));
+            if($this->request->data($data_sended)){
+               debug('данные присланы сохранение');
+               $this->save();
             } else {
-               $this->Session->setFlash('Выберете группу для добавления студентов', 'default', array('class' => 'alert alert-error'));
-               $this->redirect('/groups');
+               debug('данных нет');
+               if (!is_null($group_id)) {
+                  $this->set('groupId', $group_id);
+                  $this->set('groupNumber',$this->requestAction("/groups/get_number/$group_id"));
+               } else {
+                  $this->Session->setFlash('Выберете группу для добавления студентов', 'default', array('class' => 'alert alert-error'));
+                  $this->redirect('/groups');
+               }
             }
    	   }
          
          function save() {
-            //debug($this->request->data);
-            if ($this->request->data) {
+               if ($this->request->data) {
                debug('ветка да');
+
 
                $dataSource = $this->Student->getDataSource();
                $dataSource->begin();
@@ -64,10 +73,12 @@
                   $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
                }
 
+
             } else {
                debug('ветка нет');
                $this->Session->setFlash('Ошибка при добавлении студента', 'default', array('class' => 'alert alert-error'));
-            }     
+            }  
+         //$this->render('add');   
          }
          
    }

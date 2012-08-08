@@ -23,7 +23,7 @@ echo $this->Form->input('Person.sex',
 );
 echo $this->Form->input('GroupStudent.group_id', array('type' => 'hidden', 'value' => $groupId));
 
-echo $this->Form->end('Добавить студента');
+echo $this->Form->end(array('label'=>'Добавить студента', 'name' => 'data_sended'));
 
 
 ?>
