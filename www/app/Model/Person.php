@@ -8,7 +8,7 @@ class Person extends AppModel {
             'rule' => 'notEmpty',
             'message' => 'Введите имя'
          ),
-         'numeric' => array(
+         'alphaNumeric' => array(
             'rule'    => 'alphaNumeric', //'/^[а-яa-z]$/i',
             'message' => 'Имя должно быть из букв'
          )

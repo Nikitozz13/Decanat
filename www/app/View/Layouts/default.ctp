@@ -55,6 +55,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<li <?php if ($controller == 'students') : ?> class="active" <?php endif ?> > <a href="/students">Студенты</a></li>
 						<li <?php if ($controller == 'groups') : ?> class="active" <?php endif ?>><a href="/groups">Группы</a></li>
 						<li <?php if ($controller == 'specialities') : ?> class="active" <?php endif ?>><a href="/specialities">Специальности</a></li>
+						<li <?php if ($controller == 'users') : ?> class="active" <?php endif ?>><a href="/users/login">Войти в систему</a></li>
+						<li ><a href="/users/logout">Выйти из системы</a></li>			
 					</ul>
 				</div>
 			</div>

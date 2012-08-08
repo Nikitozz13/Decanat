@@ -2,6 +2,7 @@
 class Speciality extends AppModel {
    public $name = 'Speciality';
    public $belongsTo = 'Faculty';
+   public $hasMany = 'Group';
 
    public $validate = array(
       'name' => array(

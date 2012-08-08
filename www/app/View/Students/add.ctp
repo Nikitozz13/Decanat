@@ -2,11 +2,7 @@
 
 
 <?
-echo $this->Form->create('Student'/*, 
-	array(
-		'action' => 'add'
-	)*/
-);
+echo $this->Form->create('Student');
 echo $this->Form->input('Student.personal_number', array('label' => 'Персональный номер:'));
 echo $this->Form->input('Person.last_name', array('label' => 'Фамилия:'));
 echo $this->Form->input('Person.first_name', array('label' => 'Имя:'));
