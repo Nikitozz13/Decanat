@@ -29,38 +29,12 @@
                if($this->request->data('data_sended')){      // нажали на кнопку - значит пытаемся сохранить
                   debug('данные присланы сохранение');
                   
-                  $dataSource = $this->Student->getDataSource();
-                  $dataSource->begin();
-                  $allright = true;
-
-                  if($this->Person->save($this->request->data)) {
-                        $this->request->data['Student']['person_id'] = $this->Person->id;
-
-                        if($this->Student->save($this->request->data)) {
-                              $this->request->data['GroupStudent']['student_id'] = $this->Student->id;
-
-                              if($this->GroupStudent->save($this->request->data)) {
-                              } else {
-                                 $allright = false;
-                              }
-
-                        } else {
-                           $allright = false;
-                        }
-
-
-                  } else {
-                     $allright = false;
-                  }                     
-
-                  if ($allright) {
-                     $dataSource->commit();
+                  if( $this->Student->save_student($this->request->data)){
                      $this->Session->setFlash('Студент добавлен', 'default', array('class' => 'alert alert-success'));
                      $this->redirect("/students/students_from_group/$group_id");
                   } else {
-                     $dataSource->rollback();
                      $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
-                  }
+                  };
 
                } else {               // на кнопку не нажимали - занимаемся только отображением страницы
                   debug('данных нет'); 

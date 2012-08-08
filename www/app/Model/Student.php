@@ -10,7 +10,7 @@ class Student extends AppModel {
             'rule' => 'notEmpty',
             'message' => 'Введите персональный номер студента'
          ),
-         
+
          'numeric' =>array(
             'rule' => 'numeric',
             'message' => 'Персональный номер должен быть числом'
@@ -142,6 +142,41 @@ class Student extends AppModel {
       $options['fields'] = '*';
 
       return $this->find('all', $options);
+   }
+
+
+   public function save_student($data){
+      $dataSource = $this->getDataSource();
+      $dataSource->begin();
+      $allright = true;
+
+      if($this->Person->save($data)) {
+            $data['Student']['person_id'] = $this->Person->id;
+
+            if($this->save($data)) {
+                  $data['GroupStudent']['student_id'] = $this->id;
+
+                  if($this->GroupStudent->save($data)) {
+                  } else {
+                     $allright = false;
+                  }
+
+            } else {
+               $allright = false;
+            }
+
+
+      } else {
+         $allright = false;
+      }                     
+
+      if ($allright) {
+         $dataSource->commit();
+         return true;
+      } else {
+         $dataSource->rollback();
+         return false;
+      }
    }
 
 }
