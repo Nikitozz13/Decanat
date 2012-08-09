@@ -107,5 +107,24 @@ class Speciality extends AppModel {
       return $this->find('list', $options);
    }
 
+   public function save_speciality($data) {
+         $dataSource = $this->getDataSource();
+         $dataSource->begin();
+         $allright = true;
+
+         if ($this->save($data)) {
+         } else {
+            $allright = false;
+            }
+
+         if ($allright) {
+            $dataSource->commit();
+            return true;
+         } else {
+            $dataSource->rollback();
+            return true;
+            }
+   }
+
 }
 ?>

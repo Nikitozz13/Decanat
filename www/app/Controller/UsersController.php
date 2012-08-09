@@ -28,7 +28,8 @@ class UsersController extends AppController {
          $this->User->create();           
          if($this->User->save_user($this->request->data)){
             $this->Session->setFlash('Секретарь добавлен', 'default', array('class' => 'alert alert-success'));
-            $this->render();
+            //$this->render();
+            $this->redirect("/users/login");
          } else {
             $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
          };

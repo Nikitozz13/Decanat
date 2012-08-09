@@ -3,7 +3,7 @@
          public $uses = array('Speciality');
 
    	   function index() {
-            $specialities = $this->Speciality->index($this->Auth->user('Secretary.faculty_id'));
+            $specialities = $this->Speciality->index(1); // заглушка TODO: передать id факультета секретаря 
             //debug($specialities);
    	   	$this->set('specialities', $specialities);
    	   }
@@ -15,33 +15,19 @@
    	   }
 
          function add() {
-
-         }
-
-         function save () {
-            if ($this->request->data) {
-
-               $dataSource = $this->Speciality->getDataSource();
-               $dataSource->begin();
-               $allright = true;
-
-               if ($this->Speciality->save($this->request->data)) {
-               } else {
-                  $allright = false;
-                  }
-
-               if ($allright) {
-                  $dataSource->commit();
+            if ($this->request->data('data_sended')) {
+               
+               if ($this->Speciality->save_speciality($this->request->data)) {
                   $this->Session->setFlash('Специальность добавлена', 'default', array('class' => 'alert alert-success'));
+                  //$this->redirect("/specialities");
                } else {
-                  $dataSource->rollback();
                   $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
-                  }
-
-            } else {
-               debug('ветка нет');
-               $this->Session->setFlash('Ошибка при добавлении студента', 'default', array('class' => 'alert alert-error'));
                }
+            } else {
+               debug('данных нет');
+            }
+
          }
+
    }
 ?>
