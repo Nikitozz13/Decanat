@@ -6,7 +6,7 @@
 
 
    	   function index() {
-            $students = $this->Student->students_list(1); // заглушка TODO: передать id факультета секретаря 
+            $students = $this->Student->students_list($this->Auth->user('Secretary.faculty_id'));
             //debug($students);
    	   	$this->set('students', $students);
    	   }

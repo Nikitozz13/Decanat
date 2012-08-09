@@ -3,7 +3,7 @@ class GroupsController extends AppController {
    public $uses = array('Group', 'Speciality', 'EducationForm');
 
    function index($course = 1) {
-      $groups = $this->Group->index(1, $course); // заглушка TODO: передать id факультета секретаря 
+      $groups = $this->Group->index($this->Auth->user('Secretary.faculty_id'), $course);
       //debug($groups);
 
       $this->set('course', $course);
@@ -23,13 +23,13 @@ class GroupsController extends AppController {
 
    public function add() {
       $this->set('education_forms_list', $this->EducationForm->find('list'));
-      $this->set('specialities_list', $this->Speciality->specialities_list(1)); // TODO передать id факультета серкетаря
+      $this->set('specialities_list', $this->Speciality->specialities_list($this->Auth->user('Secretary.faculty_id')));
       if($this->request->data('data_sended')){
          debug('данные присланы сохранение');
          $this->Group->create();           
          if($this->Group->save_group($this->request->data)){
             $this->Session->setFlash('Группа добавлена', 'default', array('class' => 'alert alert-success'));
-            $this->render();
+            $this->redirect('/groups');
          } else {
             $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
          };
