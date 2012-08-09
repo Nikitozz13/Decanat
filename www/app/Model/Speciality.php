@@ -3,6 +3,7 @@ class Speciality extends AppModel {
    public $name = 'Speciality';
    public $belongsTo = 'Faculty';
    public $hasMany = 'Group';
+   public $displayField = 'name';
 
    public $validate = array(
       'name' => array(
@@ -41,15 +42,15 @@ class Speciality extends AppModel {
       )
    );
 
-	public function specialities_list($faculty_id) {
+	public function index($faculty_id) {
 
-            $options['conditions'] = array(
-               'Faculty.id' => $faculty_id
-            );
+      $options['conditions'] = array(
+         'faculty_id' => $faculty_id
+      );
 
-            $options['fields'] = '*';
+      $options['fields'] = '*';
 
-            return $this->find('all', $options);
+      return $this->find('all', $options);
    }
 
    public function students_from_speciality($speciality_id){
@@ -96,11 +97,15 @@ class Speciality extends AppModel {
 
    $options['fields'] = '*';
 
-   $specialities = $this->find('all', $options);
-
-   return $specialities;
+   return $this->find('all', $options);
    }
 
+   public function specialities_list($faculty_id){
+      $options['conditions'] = array(
+         'faculty_id' => $faculty_id
+      );
+      return $this->find('list', $options);
+   }
 
 }
 ?>

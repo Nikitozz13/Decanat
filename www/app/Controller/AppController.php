@@ -41,6 +41,6 @@ class AppController extends Controller {
 	);
 	public function beforeFilter() {
 		$this->set('controller', ($this->request->controller));
-		//$this->Auth->allow();
+		$this->Auth->allow();
 	}
 }

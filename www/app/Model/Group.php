@@ -101,5 +101,25 @@ class Group extends AppModel {
 		return $this->find('all',$options);
 
 	}
+
+	public function save_group($data){
+		$dataSource = $this->getDataSource();
+		$dataSource->begin();
+		$allright = true;
+
+		if($this->save($data)) {
+			
+		} else {
+			$allright = false;
+		}                     
+
+		if ($allright) {
+			$dataSource->commit();
+			return true;
+		} else {
+			$dataSource->rollback();
+			return false;
+		}
+	}
 }
 ?>
