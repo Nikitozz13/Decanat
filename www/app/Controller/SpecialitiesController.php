@@ -25,7 +25,7 @@
                   $this->Session->setFlash('Ошибка', 'default', array('class' => 'alert alert-error'));
                }
             } else {
-               debug('данных нет');
+               //debug('данных нет');
             }
 
          }

@@ -24,7 +24,7 @@ class UsersController extends AppController {
    public function add() {
       $this->set('faculties_list', $this->Faculty->faculties_list());
       if($this->request->data('data_sended')){      // нажали на кнопку - значит пытаемся сохранить
-         debug('данные присланы сохранение');
+         //debug('данные присланы сохранение');
          $this->User->create();           
          if($this->User->save_user($this->request->data)){
             $this->Session->setFlash('Секретарь добавлен', 'default', array('class' => 'alert alert-success'));
@@ -35,7 +35,7 @@ class UsersController extends AppController {
          };
 
       } else {               // на кнопку не нажимали - занимаемся только отображением страницы
-         debug('данных нет'); 
+         //debug('данных нет'); 
       }
    }
 }

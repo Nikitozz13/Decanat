@@ -25,7 +25,7 @@ class GroupsController extends AppController {
       $this->set('education_forms_list', $this->EducationForm->find('list'));
       $this->set('specialities_list', $this->Speciality->specialities_list($this->Auth->user('Secretary.faculty_id')));
       if($this->request->data('data_sended')){
-         debug('данные присланы сохранение');
+         //debug('данные присланы сохранение');
          $this->Group->create();           
          if($this->Group->save_group($this->request->data)){
             $this->Session->setFlash('Группа добавлена', 'default', array('class' => 'alert alert-success'));
@@ -35,7 +35,7 @@ class GroupsController extends AppController {
          };
 
       } else {
-         debug('данных нет'); 
+         //debug('данных нет'); 
       }
    }
 
