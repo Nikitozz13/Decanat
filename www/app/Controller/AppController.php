@@ -40,7 +40,7 @@ class AppController extends Controller {
 		)
 	);
 	public function beforeFilter() {
-		debug($this->Auth->user('Secretary.faculty_id'));
+		//debug($this->Auth->user('Secretary.faculty_id'));
 		$this->set('controller', ($this->request->controller));
 		//$this->Auth->allow();
 	}
