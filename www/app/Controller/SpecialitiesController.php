@@ -3,7 +3,7 @@
          public $uses = array('Speciality');
 
    	   function index() {
-            $specialities = $this->Speciality->index(1); // заглушка TODO: передать id факультета секретаря 
+            $specialities = $this->Speciality->index($this->Auth->user('Secretary.faculty_id')); // заглушка TODO: передать id факультета секретаря 
             //debug($specialities);
    	   	$this->set('specialities', $specialities);
    	   }
@@ -15,6 +15,7 @@
    	   }
 
          function add() {
+            $this->set('faculty_id', $this->Auth->user('Secretary.faculty_id'));
             if ($this->request->data('data_sended')) {
                
                if ($this->Speciality->save_speciality($this->request->data)) {
