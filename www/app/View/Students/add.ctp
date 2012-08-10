@@ -1,8 +1,6 @@
 <h2>Добавление студента в <?=$groupNumber?> группу</h2>
 
-<link type="text/css" href="css/ui-darkness/jquery-ui-1.8.22.custom.css" rel="stylesheet" />
-<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-<script src="js/jquery-ui-1.8.22.custom.min.js" type="text/javascript"></script>
+<link type="text/css" href="/css/ui-darkness/jquery-ui-1.8.22.custom.css" rel="stylesheet" />
 <script src="js/i18n/jquery-ui-i18n.js" type="text/javascript"></script>
 
 <? echo $this->Form->input('Person.birthday', array('id' => 'datepicker', 'type' => 'text', 'label' => 'jQuery:',  'empty' => array('null'=>'Выберите значение'))); ?>
