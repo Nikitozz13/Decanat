@@ -1,5 +1,5 @@
 <?php
-debug($this->request->data);
+//debug($this->request->data);
 //debug( $this->request->params);
 
 /**
@@ -33,7 +33,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('main');
-		echo $this->Html->script('jquery-1.8.0.min');
+		echo $this->Html->script('jquery-1.7.2.min');
+		echo $this->Html->script('jquery-ui-1.8.22.custom.min');
 		echo $this->Html->css('bootstrap.min');
 		echo $this->Html->css('bootstrap-responsive.min');
 
